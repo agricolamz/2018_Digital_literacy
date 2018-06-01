@@ -1,0 +1,152 @@
+\documentclass[13pt, t]{beamer}
+
+% Presento style file
+\usepackage{config/presento}
+\usepackage{ulem}
+
+% custom command and packages
+\input{config/custom-command}
+
+% Information
+\title{\huge 
+14. Компьютерное моделирование\\
+15. Работа с аудио- и видеоматериалами 
+}
+\author[shortname]{Г. Мороз }
+\date{\begin{center} 
+\large 1 июня 2018 г.
+\end{center}}
+
+\begin{document}
+
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+
+\framecard[colorblue]{{\color{colorwhite} \huge Компьютерное моделирование}}
+
+\begin{frame}{Компьютерное моделирование}
+построение модели, описывающее поведение какой-то системы
+\begin{itemize}
+\item статистическая модель 
+\hfill → обсуждали на лекции про маш. обуч.
+\item симуляция
+\item \textit{модель}, описывающая форму некоторого объекта, здания и т. п.
+\end{itemize}
+\vfill
+\pause Но если подумать все это концептуально почти одно и то же.\\
+Мы будем обсуждать 2D и 3D моделирование.
+\end{frame}
+
+\begin{frame}{2D и 3D модели}
+\begin{itemize}
+\item \pause ... живопись и скульптура \pause
+\item компьютерные изображения
+\begin{itemize}
+\item растровые
+\item векторные
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Растровые vs. Векторные}
+\begin{multicols}{2}
+\begin{itemize}
+\item плохо масштабируются
+\item больше весят
+\item всемогущие
+\end{itemize}
+\columnbreak
+\begin{itemize}
+\item легко масштабируются
+\item меньше весят
+\item имеют ограничения
+\end{itemize}
+\end{multicols}
+Можно конвертировать друг в друга.
+\end{frame}
+
+\framepic{images/01-Raster-vs-Vector.png}
+
+\framepic{images/02-vectorised-photo}
+
+\begin{frame}{Анимация}
+\begin{itemize}
+\item от руки
+\item  анимация
+\item  фотоперекладка
+\item  стоп-моушен
+\item  компьютерная анимация
+\end{itemize}
+\end{frame}
+
+\framepic{images/03-illusionist}{\Large \href{https://www.youtube.com/watch?v=d5TglK8v1xs}{Сильвен Шоме (2010) Иллюзионист}}
+
+\framepic{images/04-a-scanner.png}{\Large \href{https://www.youtube.com/watch?v=TY5PpGQ2OWY}{Ричард Линклейтер (2006) Помутнение}}
+
+\framepic{images/05-isle-of-dogs.jpg}{\Large \href{https://www.youtube.com/watch?v=dt__kig8PVU}{Уэс Андерсон (2018) Остров собак}}
+
+\framepic{images/06-up.jpg}{\Large \href{https://www.youtube.com/watch?v=pkqzFUhGPJg}{Пит Доктер (2009) Вверх}}
+
+\begin{frame}{Computer-assisted vs. computer-generated}
+Существует несколько стратегий работы в компьютерной графике:
+\begin{itemize}
+\item computer-assisted
+\item computer-generated
+\end{itemize}
+\end{frame}
+
+\framepic{images/07-road-to-el-dorado.jpeg}{\Large \href{https://www.youtube.com/watch?v=JcOfJwN0bdY}{Бибо Бергерон (2000) Дорога в Эльдорадо}}
+
+\framepic{images/08-toy-story.jpg}{\Large \href{https://www.youtube.com/watch?v=tN1A2mVnrOM}{Джон Лассетер (1995) История игрушек}}
+
+\framepic{images/09-3d-printing.jpg}{\medskip \color{colorwhite}  \Large Теперь вы видите, что это --- лишь технология\vfill \pause ... начинку уже придумали}
+
+\framecard[colorblue]{{\color{colorwhite} \huge Работа с аудио- и видеоматериалами}}
+
+\begin{frame}{Какие задачи стоят при анализе аудио- и видео-}
+\pause
+\begin{itemize}
+\item извлечение, соединение, редактирование фрагментов
+\item извлечение некоторой информации
+\begin{itemize}
+\item спектральная информация
+\begin{itemize}
+\item тишина vs. разговоры/музыка
+\item один инструмент vs. оркестр
+\item светлый кадр vs. темный
+\end{itemize}
+\item семантическая информация
+\begin{itemize}
+\item помещение vs. улица
+\item распознавание чего-нибудь (человек, лицо, дым, движение и т. п.)
+\item время дня
+\item распознавание речи
+\end{itemize}
+\item оценка положения
+\begin{itemize}
+\item egomotion --- оценка положения двигающейся камеры на основании ``увиденного''/``услышанного'' (парктроник, дроны)
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Какие методы?}
+\begin{itemize}
+\item ручная разметка
+\item → обученные алгоритмы, опирающиеся на спектр
+\item → нейросети
+\end{itemize}
+
+Иногда при анализе помогает предобработка данных:
+\begin{itemize}
+\item обрезка каких-то частот
+\item перевод видео в ЧБ
+\end{itemize}
+\end{frame}
+
+\framecard[colorblue]{{\color{colorwhite} \huge Спасибо за внимание! \bigskip\\
+\Large Пишите письма\\
+agricolamz@gmail.com}}
+
+\end{document}
